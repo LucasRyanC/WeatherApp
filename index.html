@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App - Consulta Clima</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="search-box">
+        <input type="text" placeholder="Digite a cidade..." id="city-input" />
+        <button id="search-btn">🔍</button>
+      </div>
+
+      <div class="weather-data hide" id="weather-data">
+        <h2>
+          <span id="city">Cuiabá</span>
+          <img src="" alt="Bandeira do país" id="country" />
+        </h2>
+        <p id="temperature"><span>28</span>°C</p>
+
+        <div class="description-container">
+          <p id="description">Ensolarado</p>
+          <img src="" alt="Condição do tempo" id="weather-icon" />
+        </div>
+
+        <div class="details-container">
+          <div class="detail">
+            <p>Umidade: <span id="humidity">60%</span></p>
+          </div>
+          <div class="detail">
+            <p>Vento: <span id="wind">5km/h</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div id="error-message" class="hide">
+        <p>Cidade não encontrada. Tente novamente.</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
