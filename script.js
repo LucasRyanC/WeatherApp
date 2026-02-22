@@ -15,7 +15,7 @@ const windElement = document.querySelector("#wind");
 const weatherContainer = document.querySelector("#weather-data");
 const errorMessage = document.querySelector("#error-message");
 
-// Funções
+
 const getWeatherData = async (city) => {
     const apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}&lang=pt_br`;
 
@@ -46,7 +46,7 @@ const showWeatherData = async (city) => {
     weatherContainer.classList.remove("hide");
 };
 
-// Eventos
+
 searchBtn.addEventListener("click", (e) => {
     e.preventDefault();
     const city = cityInput.value;
