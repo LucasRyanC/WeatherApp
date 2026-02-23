@@ -1,5 +1,5 @@
-const apiKey = "c3e319b325c32e6ed762a1109cf13de8"; // Substitua pela sua chave real
-const apiCountryURL = "https://flagsapi.com/"; // API para bandeiras
+const apiKey = "c3e319b325c32e6ed762a1109cf13de8";
+const apiCountryURL = "https://flagsapi.com/";
 
 const cityInput = document.querySelector("#city-input");
 const searchBtn = document.querySelector("#search-btn");
