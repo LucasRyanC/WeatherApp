@@ -17,45 +17,51 @@ const errorMessage = document.querySelector("#error-message");
 
 // Funções
 const getWeatherData = async (city) => {
-    const apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}&lang=pt_br`;
+  const apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}&lang=pt_br`;
 
-    const res = await fetch(apiWeatherURL);
-    const data = await res.json();
+  const res = await fetch(apiWeatherURL);
+  const data = await res.json();
 
-    return data;
+  return data;
 };
 
 const showWeatherData = async (city) => {
-    const data = await getWeatherData(city);
+  const data = await getWeatherData(city);
 
-    if (data.cod === "404") {
-        errorMessage.classList.remove("hide");
-        weatherContainer.classList.add("hide");
-        return;
-    }
+  if (data.cod === "404") {
+    errorMessage.classList.remove("hide");
+    weatherContainer.classList.add("hide");
+    return;
+  }
 
-    errorMessage.classList.add("hide");
-    cityElement.innerText = data.name;
-    tempElement.innerText = parseInt(data.main.temp);
-    descElement.innerText = data.weather[0].description;
-    weatherIconElement.setAttribute("src", `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`);
-    countryElement.setAttribute("src", `https://flagsapi.com/${data.sys.country}/flat/64.png`);
-    humidityElement.innerText = `${data.main.humidity}%`;
-    windElement.innerText = `${data.wind.speed}km/h`;
+  errorMessage.classList.add("hide");
+  cityElement.innerText = data.name;
+  tempElement.innerText = parseInt(data.main.temp);
+  descElement.innerText = data.weather[0].description;
+  weatherIconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`,
+  );
+  countryElement.setAttribute(
+    "src",
+    `https://flagsapi.com/${data.sys.country}/flat/64.png`,
+  );
+  humidityElement.innerText = `${data.main.humidity}%`;
+  windElement.innerText = `${data.wind.speed}km/h`;
 
-    weatherContainer.classList.remove("hide");
+  weatherContainer.classList.remove("hide");
 };
 
 // Eventos
 searchBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    const city = cityInput.value;
-    showWeatherData(city);
+  e.preventDefault();
+  const city = cityInput.value;
+  showWeatherData(city);
 });
 
 cityInput.addEventListener("keyup", (e) => {
-    if (e.code === "Enter") {
-        const city = e.target.value;
-        showWeatherData(city);
-    }
+  if (e.code === "Enter") {
+    const city = e.target.value;
+    showWeatherData(city);
+  }
 });
