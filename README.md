@@ -28,7 +28,7 @@ The application was fully refactored to **English** and features a dynamic forec
 ## 📸 Preview
 
 <div align="center">
-  <img src="assets/screenshot" alt="Project Screenshot" width="100%">
+  <img src="assets\screenshot.png" alt="Project Screenshot" width="100%">
 </div>
 
 ---
