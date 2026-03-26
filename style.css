@@ -6,7 +6,7 @@
 }
 
 body {
-  background: radial-gradient(circle at top, #1e3a5f 0%, #030014 100%);
+  background: radial-gradient(circle at top, #5f1e34 0%, #030014 100%);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -52,12 +52,12 @@ header h1 {
 }
 
 .search-box input:focus {
-  border-color: #00a8ff;
+  border-color: #ff0062;
   background: rgba(255, 255, 255, 0.08);
 }
 
 .search-box button {
-  background: #00a8ff;
+  background: #ff0062a6;
   border: none;
   padding: 0 25px;
   border-radius: 12px;
@@ -68,7 +68,7 @@ header h1 {
 }
 
 .search-box button:hover {
-  background: #00d2ff;
+  background: #ff0062;
   transform: translateY(-2px);
 }
 
