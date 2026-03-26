@@ -6,7 +6,7 @@
 }
 
 body {
-  background: radial-gradient(circle at top, #5f1e34 0%, #030014 100%);
+  background: radial-gradient(circle at top, rgb(133, 74, 20) 0%, #030014 100%);
   min-height: 100vh;
   display: flex;
   justify-content: center;
